@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="display-area">
+            <div id="display" class="display">0</div>
+        </div>
+
+        <div class="top-controls">
+            <button id="btn-history-toggle" class="control-btn">History</button>
+            <div class="haptic-control">
+                <label for="haptic-slider">Haptics:</label>
+                <input type="range" id="haptic-slider" min="0" max="50" value="15">
+            </div>
+        </div>
+
+        <div class="keypad">
+            <button class="btn action clear" data-val="C">C</button>
+            <button class="btn action" data-val="Backspace">⌫</button>
+            <button class="btn operator" data-val="/">/</button>
+            <button class="btn operator" data-val="*">*</button>
+
+            <button class="btn number" data-val="7">7</button>
+            <button class="btn number" data-val="8">8</button>
+            <button class="btn number" data-val="9">9</button>
+            <button class="btn operator" data-val="-">-</button>
+
+            <button class="btn number" data-val="4">4</button>
+            <button class="btn number" data-val="5">5</button>
+            <button class="btn number" data-val="6">6</button>
+            <button class="btn operator" data-val="+">+</button>
+
+            <button class="btn number" data-val="1">1</button>
+            <button class="btn number" data-val="2">2</button>
+            <button class="btn number" data-val="3">3</button>
+            <button class="btn action equal" data-val="=">=</button>
+
+            <button class="btn number zero" data-val="0">0</button>
+            <button class="btn number" data-val=".">.</button>
+        </div>
+
+        <div id="history-panel" class="history-panel hidden">
+            <div class="history-header">
+                <h3>History</h3>
+                <button id="btn-close-history" class="control-btn">Close</button>
+            </div>
+            <div id="history-list" class="history-list"></div>
+            <button id="btn-clear-history" class="control-btn clear-hist-btn">Clear History</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
